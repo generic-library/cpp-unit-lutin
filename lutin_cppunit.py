@@ -184,4 +184,9 @@ def create(target, module_name):
 	my_module.add_header_file([
 		"generated/config-auto.h",
 		], destination_path='cppunit')
+	my_module.add_module_depend([
+		    'cxx',
+		    'pthread',
+		    'm'
+		    ])
 	return my_module
